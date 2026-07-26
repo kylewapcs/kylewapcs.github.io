@@ -3,65 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Welcome to kylewapcs.github.io">
-  <title>kylewapcs</title>
+  <meta name="description" content="Kyle Wang is a UChicago student interested in mathematics and computer science.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Kyle Wang</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav">
-      <a class="nav-brand" href="/">kylewapcs</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <nav class="nav" aria-label="Main navigation">
+      <a class="name" href="#home">Kyle Wang</a>
+      <div class="nav-links">
+        <a href="#projects">projects</a>
+        <a href="#blog">blog</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="hero-label">Hello, I'm</p>
-      <h1>Kyle</h1>
-      <p class="hero-tagline">Welcome to my GitHub Pages site.</p>
-      <a class="btn" href="#projects">View projects</a>
-    </section>
-
-    <section id="about" class="section">
-      <h2>About</h2>
+  <main id="home">
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">Hello! I’m Kyle.</h1>
       <p>
-        This is my personal website hosted on GitHub Pages. Edit
-        <code>index.html</code> and the files in <code>css/</code> to make it your own.
+        I’m a freshman at UChicago, where I currently plan on studying math and
+        computer science. Previously, I’ve worked on high-speed dielectric
+        spectroscopy and computer vision for octopus sleep, and learned about
+        nuclear physics at the Facility for Rare Isotope Beams. In my free time,
+        I enjoy watching sports, reading the news, playing card games, and
+        working out.
       </p>
     </section>
 
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>A short description of your first project goes here.</p>
-          <a href="https://github.com/kylewapcs" target="_blank" rel="noopener noreferrer">GitHub →</a>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>A short description of your second project goes here.</p>
-          <a href="https://github.com/kylewapcs" target="_blank" rel="noopener noreferrer">GitHub →</a>
-        </article>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <p class="section-note">Things I’ve built and explored.</p>
+      <div class="empty-state">
+        <span>More soon</span>
+        <span aria-hidden="true">↗</span>
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <p>
-        Find me on
-        <a href="https://github.com/kylewapcs" target="_blank" rel="noopener noreferrer">GitHub</a>.
-      </p>
+    <section id="blog" class="section" aria-labelledby="blog-title">
+      <h2 id="blog-title">Blog</h2>
+      <p class="section-note">Notes on math, technology, sports, and other things I find interesting.</p>
+      <div class="empty-state">
+        <span>Writing coming soon</span>
+        <span aria-hidden="true">↗</span>
+      </div>
     </section>
+
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year"></span> kylewapcs. Hosted on GitHub Pages.</p>
+    <span>© <span id="year"></span> Kyle Wang</span>
+    <a href="https://github.com/kylewapcs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </footer>
 
   <script src="js/main.js"></script>

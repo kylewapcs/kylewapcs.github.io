@@ -6,7 +6,18 @@
   <meta name="description" content="Kyle Wang is a UChicago student interested in mathematics and computer science.">
   <meta name="theme-color" content="#ffffff">
   <title>Kyle Wang</title>
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <header class="site-header">
@@ -15,6 +26,7 @@
       <div class="nav-links">
         <a href="#projects">projects</a>
         <a href="#blog">blog</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">☾ Dark</button>
       </div>
     </nav>
   </header>
@@ -23,9 +35,9 @@
     <section class="intro" aria-labelledby="intro-title">
       <h1 id="intro-title">Hello! I’m Kyle.</h1>
       <p>
-        I’m a freshman at UChicago, where I currently plan on studying math and
-        computer science. Previously, I’ve worked on high-speed dielectric
-        spectroscopy and computer vision for octopus sleep, and learned about
+        I’m a freshman at UChicago, where I am studying math and
+        computer science. Previously, I’ve worked on a high-speed dielectric
+        spectrometer to detect the glass transition, computer vision for octopus sleep, and studied
         nuclear physics at the Facility for Rare Isotope Beams. In my free time,
         I enjoy watching sports, reading the news, playing card games, and
         working out.
@@ -34,16 +46,92 @@
 
     <section id="projects" class="section" aria-labelledby="projects-title">
       <h2 id="projects-title">Projects</h2>
-      <p class="section-note">Things I’ve built and explored.</p>
-      <div class="empty-state">
-        <span>More soon</span>
-        <span aria-hidden="true">↗</span>
-      </div>
+      <article class="project-card">
+        <div class="project-logo">
+          <img src="assets/ecosense-logo.png" alt="EcoSense">
+        </div>
+        <div class="project-content">
+          <div class="project-heading">
+            <div>
+              <h3>EcoSense</h3>
+              <p class="project-label">Congressional App Challenge Winner</p>
+            </div>
+            <span class="project-year">2024</span>
+          </div>
+          <p class="project-description">
+            I co-built EcoSense, a Congressional App Challenge-winning sustainability app with
+            environmental news, an AI waste classifier, and a community forum. The cross-platform app
+            uses TypeScript, React Native, Expo, Firebase, Node.js, Express, Google Gemini, and Event
+            Registry.
+          </p>
+          <div class="project-links" aria-label="EcoSense links">
+            <a href="https://www.youtube.com/watch?app=desktop&amp;v=hnrSLaiGxCQ"
+               target="_blank" rel="noopener noreferrer">Watch demo ↗</a>
+            <a href="https://github.com/NapervilleASK/congressionalapp"
+               target="_blank" rel="noopener noreferrer">View code ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--text">
+        <a class="project-image" href="assets/octopus-research.png" target="_blank"
+           rel="noopener noreferrer" aria-label="Open full-size octopus research image">
+          <img src="assets/octopus-research.png"
+               alt="Examples of octopus image annotation and segmentation work">
+        </a>
+        <div class="project-content">
+          <div class="project-heading">
+            <div>
+              <h3>Octopus Segmentation Model</h3>
+              <p class="project-label">Computer vision research · Collaboration with Dr. Venkatesh Gopal</p>
+            </div>
+          </div>
+          <p class="project-description">
+            In collaboration with Dr. Venkatesh Gopal, I helped annotate more than 800 underwater images
+            and developed a YOLOv8 segmentation model using Python, PyTorch, and OpenCV. NITMB researchers
+            later used its segmented octopus regions to study entropy patterns across pixel intensities.
+          </p>
+          <div class="project-links" aria-label="Octopus segmentation model links">
+            <a href="https://github.com/kylewapcs/octopus_yolo_model"
+               target="_blank" rel="noopener noreferrer">View code ↗</a>
+            <a href="https://www.nitmb.org"
+               target="_blank" rel="noopener noreferrer">About NITMB ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card project-card--text">
+        <a class="project-image" href="assets/cryopreservation-research.png" target="_blank"
+           rel="noopener noreferrer" aria-label="Open full-size cryopreservation research image">
+          <img src="assets/cryopreservation-research.png"
+               alt="Cryopreservation experiments, custom circuits, hardware, and data plots">
+        </a>
+        <div class="project-content">
+          <div class="project-heading">
+            <div>
+              <h3>Cryopreservation &amp; Dielectric Spectroscopy</h3>
+              <p class="project-label">Research Assistant · Northern Illinois University · Ongoing</p>
+            </div>
+          </div>
+          <p class="project-meta">Dr. Laurence Lurio · Grades 11–12 · 12 hrs/week, 40 weeks/year</p>
+          <p class="project-description">
+            With Dr. Laurence Lurio, I am researching cryopreservation and molecular relaxation using a
+            custom RC circuit and dielectric spectroscopy. I programmed a Teensy 4.0 in C++ for
+            sub-microsecond measurements and built a Python data and visualization pipeline. I
+            authored an 18-page design log and helped validate the setup at Argonne National
+            Laboratory.
+          </p>
+          <div class="project-links" aria-label="Cryopreservation research links">
+            <a href="https://github.com/kylewapcs/cryopreservation/settings"
+               target="_blank" rel="noopener noreferrer">View research code ↗</a>
+          </div>
+        </div>
+      </article>
     </section>
 
     <section id="blog" class="section" aria-labelledby="blog-title">
       <h2 id="blog-title">Blog</h2>
-      <p class="section-note">Notes on math, technology, sports, and other things I find interesting.</p>
+      <p class="section-note"></p>
       <div class="empty-state">
         <span>Writing coming soon</span>
         <span aria-hidden="true">↗</span>
@@ -57,6 +145,6 @@
     <a href="https://github.com/kylewapcs" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>

@@ -194,7 +194,7 @@ h2 {
   align-items: center;
   justify-content: center;
   margin: 0 auto 24px;
-  padding: 10%;
+  padding: 4%;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--surface);
@@ -225,7 +225,7 @@ h2 {
 
 .project-logo img {
   display: block;
-  width: min(78%, 440px);
+  width: 100%;
   height: auto;
 }
 
@@ -344,7 +344,7 @@ h2 {
   }
 
   .project-logo {
-    padding: 9%;
+    padding: 4%;
   }
 
   .list-item time {

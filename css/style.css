@@ -242,15 +242,10 @@ h2 {
 }
 
 .project-label,
-.project-year,
-.project-meta {
+.project-year {
   margin-bottom: 0;
   color: var(--secondary);
   font-size: 0.84rem;
-}
-
-.project-meta {
-  margin: -3px 0 14px;
 }
 
 .project-year {

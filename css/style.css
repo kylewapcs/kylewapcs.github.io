@@ -189,17 +189,6 @@ h2 {
   background: var(--surface);
 }
 
-:root[data-theme="dark"] .project-card--ecosense {
-  --text: #171717;
-  --secondary: #6b6b6b;
-  --border: #e5e5e5;
-  --link: #3157c8;
-  --body-text: #393939;
-  --surface: #ffffff;
-  color: var(--text);
-  color-scheme: light;
-}
-
 .project-logo {
   display: flex;
   width: 100%;
@@ -212,6 +201,11 @@ h2 {
   border-radius: 10px;
   background: var(--surface);
   overflow: hidden;
+}
+
+:root[data-theme="dark"] .project-card--ecosense .project-logo {
+  border-color: #e5e5e5;
+  background: #ffffff;
 }
 
 .project-image {
